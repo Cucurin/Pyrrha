@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlhy1oo88xiuh"]
+
+[ext_resource type="Texture2D" uid="uid://bjxfyyaxfc27r" path="res://Assets/Background/Mountain Bg/sky.png" id="1_1ctti"]
+[ext_resource type="Texture2D" uid="uid://bunl6hrg8r606" path="res://Assets/Background/Mountain Bg/far-clouds.png" id="2_cb2di"]
+[ext_resource type="Texture2D" uid="uid://xnw13cbjafhr" path="res://Assets/Background/Mountain Bg/near-clouds.png" id="3_u8c23"]
+[ext_resource type="Texture2D" uid="uid://ben0u21hbsff7" path="res://Assets/Background/Mountain Bg/far-mountains.png" id="4_tqflk"]
+[ext_resource type="Texture2D" uid="uid://cu1id2fnjq0ut" path="res://Assets/Background/Mountain Bg/mountains.png" id="5_finvd"]
+[ext_resource type="Texture2D" uid="uid://dwlre8pgi5dxc" path="res://Assets/Background/Mountain Bg/trees.png" id="6_ho07f"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Cielo" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0, 0)
+
+[node name="Luna" type="Sprite2D" parent="Cielo"]
+position = Vector2(441, 319)
+scale = Vector2(2.75313, 2.69167)
+texture = ExtResource("1_1ctti")
+
+[node name="Sky3" type="Sprite2D" parent="Cielo/Luna"]
+position = Vector2(77.0034, 13.3746)
+scale = Vector2(1.19481, 1.23142)
+texture = ExtResource("1_1ctti")
+
+[node name="Sky2" type="Sprite2D" parent="Cielo/Luna/Sky3"]
+position = Vector2(-44.6765, 10.774)
+texture = ExtResource("1_1ctti")
+metadata/_edit_lock_ = true
+
+[node name="Nubes Lejanas" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Far-clouds" type="Sprite2D" parent="Nubes Lejanas"]
+position = Vector2(188.313, 346)
+scale = Vector2(2.93262, 2.53958)
+texture = ExtResource("2_cb2di")
+
+[node name="Far-clouds2" type="Sprite2D" parent="Nubes Lejanas"]
+position = Vector2(574, 348)
+scale = Vector2(3.12012, 2.53958)
+texture = ExtResource("2_cb2di")
+
+[node name="Far-clouds3" type="Sprite2D" parent="Nubes Lejanas"]
+position = Vector2(963.156, 348)
+scale = Vector2(2.98193, 2.53958)
+texture = ExtResource("2_cb2di")
+
+[node name="Nubes Cercanas" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Near-clouds" type="Sprite2D" parent="Nubes Cercanas"]
+position = Vector2(195, 365.5)
+scale = Vector2(2.70833, 2.34583)
+texture = ExtResource("3_u8c23")
+
+[node name="Near-clouds2" type="Sprite2D" parent="Nubes Cercanas"]
+position = Vector2(584, 367)
+scale = Vector2(2.70833, 2.34583)
+texture = ExtResource("3_u8c23")
+
+[node name="Near-clouds3" type="Sprite2D" parent="Nubes Cercanas"]
+position = Vector2(966, 368)
+scale = Vector2(2.60417, 2.34583)
+texture = ExtResource("3_u8c23")
+
+[node name="Montañas Lejanas" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Far-mountains" type="Sprite2D" parent="Montañas Lejanas"]
+position = Vector2(199, 381)
+scale = Vector2(2.4875, 2.25)
+texture = ExtResource("4_tqflk")
+
+[node name="Far-mountains2" type="Sprite2D" parent="Montañas Lejanas"]
+position = Vector2(597, 381)
+scale = Vector2(2.4875, 2.25)
+texture = ExtResource("4_tqflk")
+
+[node name="Far-mountains3" type="Sprite2D" parent="Montañas Lejanas"]
+position = Vector2(975, 382)
+scale = Vector2(2.2375, 2.25)
+texture = ExtResource("4_tqflk")
+
+[node name="Montañas" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Mountains" type="Sprite2D" parent="Montañas"]
+position = Vector2(307.375, 397)
+scale = Vector2(1.92266, 2.08958)
+texture = ExtResource("5_finvd")
+
+[node name="Mountains2" type="Sprite2D" parent="Montañas"]
+position = Vector2(883, 396)
+scale = Vector2(1.6875, 2.08958)
+texture = ExtResource("5_finvd")
+
+[node name="Arboles" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Trees" type="Sprite2D" parent="Arboles"]
+position = Vector2(283, 407)
+scale = Vector2(2.35833, 2.04167)
+texture = ExtResource("6_ho07f")
+
+[node name="Trees2" type="Sprite2D" parent="Arboles"]
+position = Vector2(858.5, 399.75)
+scale = Vector2(2.44583, 2.09792)
+texture = ExtResource("6_ho07f")

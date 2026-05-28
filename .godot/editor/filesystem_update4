@@ -1,0 +1,12 @@
+res://Scenes/Screens/UltimaPantalla.tscn
+res://Scenes/Screens/DeadMenu.tscn
+res://Scenes/Screens/MainMenu.tscn
+res://Scenes/Screens/OpcionsMenu.tscn
+res://Scenes/Screens/OpcionsMenuController.tscn
+res://Scenes/Screens/PrimeraPantalla.tscn
+res://Scenes/Screens/SegundaPantalla.tscn
+res://Scenes/Screens/TerceraPantalla.tscn
+res://Scenes/Characters/goblin.tscn
+res://Scenes/Characters/Caballero.tscn
+res://Scenes/Objects/spike_ball.tscn
+res://Scenes/Screens/Final.tscn

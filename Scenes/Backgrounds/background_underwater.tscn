@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://biusgteoifqqb"]
+
+[ext_resource type="Texture2D" uid="uid://b1g40xdk6l1wp" path="res://Assets/Background/Underwater Bg/far.png" id="1_6xs44"]
+[ext_resource type="Texture2D" uid="uid://b2ayulio8en6g" path="res://Assets/Background/Underwater Bg/sand.png" id="2_yd368"]
+[ext_resource type="Texture2D" uid="uid://yjaapj4sa6te" path="res://Assets/Background/Underwater Bg/foregound-merged.png" id="3_yntri"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Fondo" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Far" type="Sprite2D" parent="Fondo"]
+position = Vector2(576, 324.5)
+scale = Vector2(4.5, 3.36979)
+texture = ExtResource("1_6xs44")
+
+[node name="Arena" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sand" type="Sprite2D" parent="Arena"]
+position = Vector2(291, 372)
+scale = Vector2(2.27344, 2.875)
+texture = ExtResource("2_yd368")
+
+[node name="Sand2" type="Sprite2D" parent="Arena"]
+position = Vector2(867, 372.5)
+scale = Vector2(2.23438, 2.89063)
+texture = ExtResource("2_yd368")
+
+[node name="Ruinas" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Foregound-merged" type="Sprite2D" parent="Ruinas"]
+position = Vector2(576.5, 423)
+scale = Vector2(2.25195, 2.34375)
+texture = ExtResource("3_yntri")

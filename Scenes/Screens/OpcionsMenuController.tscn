@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqr5l3de5fwrv"]
+
+[ext_resource type="Script" uid="uid://cekwswvax0skn" path="res://Scenes/Screens/opcions_menu.gd" id="1_npplt"]
+[ext_resource type="Texture2D" uid="uid://b6jah1tuwwhre" path="res://Assets/Background/Opcions_background.png" id="2_840ab"]
+[ext_resource type="Texture2D" uid="uid://bjfh08aevqqhh" path="res://Assets/Items/PS Controller/ps5 controller dark image.png" id="3_j0fhw"]
+[ext_resource type="Texture2D" uid="uid://cxe7xyil05yu0" path="res://Assets/Items/Buttons/Back/Back1.png" id="4_peb3q"]
+[ext_resource type="Texture2D" uid="uid://dqnhmbqdbmyfj" path="res://Assets/Items/Buttons/Back/Back5.png" id="5_j0fhw"]
+[ext_resource type="Texture2D" uid="uid://3oi12faifxoq" path="res://Assets/Items/Buttons/Back/Back2.png" id="6_tmwjg"]
+[ext_resource type="Texture2D" uid="uid://bokpgctoj3nwo" path="res://Assets/Items/PS Controller/xButton.png" id="7_tmwjg"]
+[ext_resource type="Texture2D" uid="uid://bsw5agapfxi6p" path="res://Assets/Items/PS Controller/moveButton.png" id="8_ixesb"]
+[ext_resource type="Texture2D" uid="uid://wycry8co23nw" path="res://Assets/Items/PS Controller/R1Button.png" id="9_x6qcf"]
+[ext_resource type="Texture2D" uid="uid://62uw806ppexa" path="res://Assets/Items/PS Controller/R2Button.png" id="10_jgfvt"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_npplt")
+
+[node name="OpcionsBackground" type="Sprite2D" parent="."]
+position = Vector2(577, 326)
+scale = Vector2(1.19531, 0.638672)
+texture = ExtResource("2_840ab")
+
+[node name="controllerButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 68.0
+offset_right = 714.0
+offset_bottom = 109.0
+text = "Controller"
+
+[node name="keyboardButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 68.0
+offset_right = 558.0
+offset_bottom = 109.0
+text = "Keyboard"
+
+[node name="FullKeyboardDark" type="Sprite2D" parent="."]
+position = Vector2(746, 315)
+scale = Vector2(1.95556, 1.93556)
+texture = ExtResource("3_j0fhw")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 560.0
+offset_right = 266.0
+offset_bottom = 668.0
+texture_normal = ExtResource("4_peb3q")
+texture_pressed = ExtResource("5_j0fhw")
+texture_hover = ExtResource("6_tmwjg")
+stretch_mode = 4
+
+[node name="XButton" type="Sprite2D" parent="."]
+position = Vector2(291, 230)
+scale = Vector2(0.84375, 0.791667)
+texture = ExtResource("7_tmwjg")
+
+[node name="MoveButton" type="Sprite2D" parent="."]
+position = Vector2(290, 286)
+texture = ExtResource("8_ixesb")
+
+[node name="R1Button" type="Sprite2D" parent="."]
+position = Vector2(291, 348)
+texture = ExtResource("9_x6qcf")
+
+[node name="R2Button" type="Sprite2D" parent="."]
+position = Vector2(291, 410)
+texture = ExtResource("10_jgfvt")
+
+[node name="Saltar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 222.0
+offset_right = 384.0
+offset_bottom = 237.0
+text = "Saltar"
+
+[node name="Moverse" type="Label" parent="."]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 278.0
+offset_right = 393.0
+offset_bottom = 311.0
+text = "Moverse
+"
+
+[node name="Atacar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 338.0
+offset_right = 393.0
+offset_bottom = 371.0
+text = "Atacar"
+
+[node name="Atacar2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 397.0
+offset_right = 393.0
+offset_bottom = 430.0
+text = "Dash"
+
+[connection signal="pressed" from="controllerButton" to="." method="_on_controller_button_pressed"]
+[connection signal="pressed" from="keyboardButton" to="." method="_on_keyboard_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

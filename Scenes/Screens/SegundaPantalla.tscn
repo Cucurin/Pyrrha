@@ -1,0 +1,260 @@
+[gd_scene load_steps=15 format=3 uid="uid://d3vpk2rkwsw4j"]
+
+[ext_resource type="PackedScene" uid="uid://dqdta1607e48g" path="res://Scenes/Backgrounds/background_forest_1.tscn" id="1_egvgd"]
+[ext_resource type="PackedScene" uid="uid://dch28g0o5fu7n" path="res://Scenes/Screens/SegundaPantallaTileMap.tscn" id="2_llat2"]
+[ext_resource type="PackedScene" uid="uid://bkurwvay31o61" path="res://Scenes/Characters/Caballero.tscn" id="3_ee3a8"]
+[ext_resource type="PackedScene" uid="uid://dp4w4luho4fqv" path="res://Scenes/Screens/DeadMenu.tscn" id="4_j2g7r"]
+[ext_resource type="PackedScene" uid="uid://bmrxpwpj1ey8e" path="res://Scenes/Objects/trampoline.tscn" id="5_5sxsw"]
+[ext_resource type="PackedScene" uid="uid://b2hx4cqlljpe6" path="res://Scenes/Objects/moving_platform_1.tscn" id="6_8esc3"]
+[ext_resource type="PackedScene" uid="uid://bhd3ui7fwrdni" path="res://Scenes/Objects/moving_saw.tscn" id="7_j2g7r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llat2"]
+size = Vector2(30.5, 614)
+
+[sub_resource type="Curve2D" id="Curve2D_j2g7r"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3469, 243, 0, 0, 0, 0, 2962, 242)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_h5axh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3404.61, -295.347, 0, 0, 0, 0, 4616.38, 613.115)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_3joo5"]
+_data = {
+"points": PackedVector2Array(-181.936, 186.079, 181.936, -186.079, 5262, 534, 39.5132, 22.0145, -39.5132, -22.0145, 5256, 140, 96.3049, -152.107, -96.3049, 152.107, 4917, 207, -61.7212, -26.8047, 61.7212, 26.8047, 5013, 546, -66.0201, 45.1719, 66.0201, -45.1719, 5262, 534)
+}
+point_count = 5
+
+[sub_resource type="Animation" id="Animation_eaw0e"]
+resource_name = "MVPlatform"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MPPath2D - 1/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MPPath2D - 2/PathFollow2D:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MPPath2D - 3/PathFollow2D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MPPath2D - 3/PathFollow2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 5)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MPPath2D - 2/PathFollow2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MPPath2D - 4/PathFollow2D:progress_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 2.51, 5)
+}
+
+[sub_resource type="Animation" id="Animation_5h0ws"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MPPath2D - 1/PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MPPath2D - 2/PathFollow2D:progress_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MPPath2D - 3/PathFollow2D:progress_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MPPath2D - 3/PathFollow2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MPPath2D - 2/PathFollow2D:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MPPath2D - 4/PathFollow2D:progress_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_woxx2"]
+_data = {
+&"MVPlatform": SubResource("Animation_eaw0e"),
+&"RESET": SubResource("Animation_5h0ws")
+}
+
+[node name="SegundaPantalla" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_egvgd")]
+
+[node name="SegundaPantallaTileMap" parent="." instance=ExtResource("2_llat2")]
+
+[node name="NextMap2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextMap2"]
+position = Vector2(9150.75, 305)
+shape = SubResource("RectangleShape2D_llat2")
+
+[node name="knight" parent="." instance=ExtResource("3_ee3a8")]
+position = Vector2(104, 503)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("4_j2g7r")]
+
+[node name="trampoline1" parent="." instance=ExtResource("5_5sxsw")]
+position = Vector2(2729, 580)
+
+[node name="trampoline2" parent="." instance=ExtResource("5_5sxsw")]
+position = Vector2(6223, 579)
+
+[node name="MPPath2D - 1" type="Path2D" parent="."]
+curve = SubResource("Curve2D_j2g7r")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MPPath2D - 1"]
+position = Vector2(3469, 243)
+rotation = -3.13962
+
+[node name="moving_platform_1" parent="MPPath2D - 1/PathFollow2D" instance=ExtResource("6_8esc3")]
+
+[node name="MPPath2D - 2" type="Path2D" parent="."]
+position = Vector2(1145.54, 495.287)
+scale = Vector2(0.726209, -0.395173)
+curve = SubResource("Curve2D_h5axh")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MPPath2D - 2"]
+position = Vector2(4616.38, 613.115)
+scale = Vector2(1.5, 1.5)
+progress = 1514.49
+rotates = false
+
+[node name="moving_platform_1" parent="MPPath2D - 2/PathFollow2D" instance=ExtResource("6_8esc3")]
+
+[node name="MPPath2D - 3" type="Path2D" parent="."]
+position = Vector2(36, 0)
+curve = SubResource("Curve2D_3joo5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MPPath2D - 3"]
+position = Vector2(5262, 534)
+rotates = false
+
+[node name="moving_platform_1" parent="MPPath2D - 3/PathFollow2D" instance=ExtResource("6_8esc3")]
+
+[node name="MPPath2D - 4" type="Path2D" parent="."]
+position = Vector2(36, 0)
+curve = SubResource("Curve2D_3joo5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="MPPath2D - 4"]
+position = Vector2(4977.51, 144.487)
+progress = 737.543
+rotates = false
+
+[node name="moving_platform_1" parent="MPPath2D - 4/PathFollow2D" instance=ExtResource("6_8esc3")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_woxx2")
+}
+autoplay = "MVPlatform"
+
+[node name="saw" parent="." instance=ExtResource("7_j2g7r")]
+position = Vector2(8238, 598)
+scale = Vector2(4, 4)
+
+[node name="saw2" parent="." instance=ExtResource("7_j2g7r")]
+position = Vector2(7328, 589)
+scale = Vector2(4, 4)
+
+[connection signal="area_entered" from="NextMap2" to="knight" method="_on_next_map_2_area_entered"]

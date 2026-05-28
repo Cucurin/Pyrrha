@@ -1,0 +1,92 @@
+[gd_scene load_steps=14 format=3 uid="uid://b70k7a1bbp30v"]
+
+[ext_resource type="Texture2D" uid="uid://c5y8ygns7lh7u" path="res://Assets/NPCs/FireWitch/Idle1.png" id="1_4qo5y"]
+[ext_resource type="Script" uid="uid://co11k3hkosy80" path="res://Scenes/Characters/fire_witch.gd" id="1_jkr58"]
+[ext_resource type="Texture2D" uid="uid://pdagsmxnrqrt" path="res://Assets/NPCs/FireWitch/Idle2.png" id="2_jkr58"]
+[ext_resource type="Texture2D" uid="uid://8y41g5t2syi0" path="res://Assets/NPCs/FireWitch/Idle3.png" id="3_ojlbh"]
+[ext_resource type="Texture2D" uid="uid://djxaro57iopsw" path="res://Assets/NPCs/FireWitch/Idle4.png" id="4_opdsq"]
+[ext_resource type="Texture2D" uid="uid://d2rnnjf6ms73d" path="res://Assets/NPCs/FireWitch/Idle5.png" id="5_kbx23"]
+[ext_resource type="Texture2D" uid="uid://kd4o60byskxq" path="res://Assets/NPCs/FireWitch/Idle6.png" id="6_qmibx"]
+[ext_resource type="Texture2D" uid="uid://dlcbicbv0lh1o" path="res://Assets/NPCs/FireWitch/Idle7.png" id="7_jdnir"]
+[ext_resource type="Texture2D" uid="uid://xqyqjivr5agc" path="res://Assets/NPCs/FireWitch/Idle8.png" id="8_57812"]
+[ext_resource type="Texture2D" uid="uid://byotnscbi2o5a" path="res://Assets/NPCs/FireWitch/Idle9.png" id="9_1wyrj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxipp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4qo5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jkr58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ojlbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_opdsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kbx23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qmibx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jdnir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_57812")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1wyrj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 13.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qo5y"]
+size = Vector2(56.5, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkr58"]
+size = Vector2(29, 68)
+
+[node name="FireWitch" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_jkr58")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.5, 0)
+sprite_frames = SubResource("SpriteFrames_dxipp")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.55752
+flip_h = true
+
+[node name="Dialog" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialog"]
+position = Vector2(2.25, -0.5)
+shape = SubResource("RectangleShape2D_4qo5y")
+
+[node name="Flip_Left" type="Area2D" parent="."]
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flip_Left"]
+position = Vector2(-16.5, -7)
+shape = SubResource("RectangleShape2D_jkr58")
+
+[node name="Flip_Right" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flip_Right"]
+position = Vector2(21, -7)
+shape = SubResource("RectangleShape2D_jkr58")
+
+[connection signal="area_entered" from="Dialog" to="." method="_on_dialog_area_entered"]
+[connection signal="area_entered" from="Flip_Left" to="." method="_on_flip_left_area_entered"]
+[connection signal="area_entered" from="Flip_Right" to="." method="_on_flip_right_area_entered"]

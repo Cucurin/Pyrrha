@@ -1,0 +1,114 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_16f38"]
+
+[resource]
+script = ExtResource("1_16f38")
+using_states = PackedStringArray()
+titles = {
+"start": "2"
+}
+character_names = PackedStringArray("Eleonor", "Caballero")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "2",
+&"type": "title"
+},
+"1": {
+&"id": "1",
+&"next_id": "2",
+&"type": ""
+},
+"10": {
+&"character": "Eleonor",
+&"id": "10",
+&"next_id": "11",
+&"text": "Precisamente. Usa estos dones con sabiduría, caballero. Tu camino apenas comienza.[next=auto]",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"character": "Eleonor",
+&"id": "2",
+&"next_id": "3",
+&"text": "Has despertado al fin, caballero.[next=auto]",
+&"type": "dialogue"
+},
+"3": {
+&"character": "Caballero",
+&"id": "3",
+&"next_id": "4",
+&"text": "¿Quién... quién eres?[next=auto]",
+&"type": "dialogue"
+},
+"4": {
+&"character": "Eleonor",
+&"id": "4",
+&"next_id": "5",
+&"text": "Mi nombre es Eleonor, bruja de las llamas eternas. Tu tiempo aún no ha llegado; he decidido devolverte la vida para que cumplas tu misión.[next=auto]",
+&"type": "dialogue"
+},
+"5": {
+&"character": "Caballero",
+&"id": "5",
+&"next_id": "6",
+&"text": "¿Me has revivido? ¿Por qué harías algo así?[next=auto]",
+&"type": "dialogue"
+},
+"6": {
+&"character": "Eleonor",
+&"id": "6",
+&"next_id": "7",
+&"text": "Tus actos pueden cambiar el destino del mundo. Pero necesitarás ayuda para avanzar por estos lugares olvidados.[next=auto]",
+&"type": "dialogue"
+},
+"7": {
+&"character": "Caballero",
+&"id": "7",
+&"next_id": "8",
+&"text": "¿Ayuda?[next=auto]",
+&"type": "dialogue"
+},
+"8": {
+&"character": "Eleonor",
+&"id": "8",
+&"next_id": "9",
+&"text": "Sí. El fuego que te ha devuelto a la vida también te otorga poderes. Primero, salta pulsando [Espacio], y para llegar más alto, vuelve a pulsar [Espacio] en el aire. Segundo, cuando enfrentes grandes abismos, pulsa la tecla [Shift] mientras te mueves hacia adelante para realizar un rápido dash impulsado por las llamas.[next=auto]",
+&"type": "dialogue"
+},
+"9": {
+&"character": "Caballero",
+&"id": "9",
+&"next_id": "10",
+&"text": "Saltar y avanzar velozmente...[next=auto]",
+&"type": "dialogue"
+}
+}
+raw_text = "~ start
+
+Eleonor: Has despertado al fin, caballero.[next=auto]
+Caballero: ¿Quién... quién eres?[next=auto]
+Eleonor: Mi nombre es Eleonor, bruja de las llamas eternas. Tu tiempo aún no ha llegado; he decidido devolverte la vida para que cumplas tu misión.[next=auto]
+Caballero: ¿Me has revivido? ¿Por qué harías algo así?[next=auto]
+Eleonor: Tus actos pueden cambiar el destino del mundo. Pero necesitarás ayuda para avanzar por estos lugares olvidados.[next=auto]
+Caballero: ¿Ayuda?[next=auto]
+Eleonor: Sí. El fuego que te ha devuelto a la vida también te otorga poderes. Primero, salta pulsando [Espacio], y para llegar más alto, vuelve a pulsar [Espacio] en el aire. Segundo, cuando enfrentes grandes abismos, pulsa la tecla [Shift] mientras te mueves hacia adelante para realizar un rápido dash impulsado por las llamas.[next=auto]
+Caballero: Saltar y avanzar velozmente...[next=auto]
+Eleonor: Precisamente. Usa estos dones con sabiduría, caballero. Tu camino apenas comienza.[next=auto]
+=> END"
+metadata/dialogue_manager_version = "3.6.3"

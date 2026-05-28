@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://bri1cttltylcc"]
+
+[ext_resource type="Texture2D" uid="uid://bawyeucfnq61f" path="res://Assets/NPCs/FemaleKnight/Idle1.png" id="1_f70lc"]
+[ext_resource type="Texture2D" uid="uid://m0mp3ebd3rdw" path="res://Assets/NPCs/FemaleKnight/Idle2.png" id="2_ttoco"]
+[ext_resource type="Texture2D" uid="uid://d3kypl78tio2" path="res://Assets/NPCs/FemaleKnight/Idle3.png" id="3_fadjb"]
+[ext_resource type="Texture2D" uid="uid://c7i8kblcpe8ve" path="res://Assets/NPCs/FemaleKnight/Idle4.png" id="4_bdc7h"]
+[ext_resource type="Texture2D" uid="uid://0se2jqgm662u" path="res://Assets/NPCs/FemaleKnight/Idle5.png" id="5_4k3k8"]
+[ext_resource type="Texture2D" uid="uid://bvywvl3bt260d" path="res://Assets/NPCs/FemaleKnight/Idle6.png" id="6_vho8d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rq2d8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f70lc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ttoco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fadjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bdc7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4k3k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vho8d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1eja1"]
+size = Vector2(56.5, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojj4o"]
+size = Vector2(29, 68)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rq2d8")
+animation = &"idle"
+frame_progress = 0.983618
+
+[node name="Dialog" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dialog"]
+position = Vector2(2.25, -0.5)
+shape = SubResource("RectangleShape2D_1eja1")
+
+[node name="Flip_Left" type="Area2D" parent="."]
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flip_Left"]
+position = Vector2(-16.5, -7)
+shape = SubResource("RectangleShape2D_ojj4o")
+
+[node name="Flip_Right" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flip_Right"]
+position = Vector2(21, -7)
+shape = SubResource("RectangleShape2D_ojj4o")

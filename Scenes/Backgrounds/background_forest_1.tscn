@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqdta1607e48g"]
+
+[ext_resource type="Texture2D" uid="uid://tmst88k0ra1x" path="res://Assets/Background/Forest Bg/back.png" id="1_jyn5l"]
+[ext_resource type="Texture2D" uid="uid://4h67aogt127b" path="res://Assets/Background/Forest Bg/middle.png" id="2_geqcf"]
+[ext_resource type="Texture2D" uid="uid://d2jw55ffehrpb" path="res://Assets/Background/Forest Bg/front.png" id="3_yen4d"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Fondo" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="Fondo"]
+position = Vector2(113.5, 324)
+scale = Vector2(2.8375, 2.89286)
+texture = ExtResource("1_jyn5l")
+
+[node name="Back2" type="Sprite2D" parent="Fondo"]
+position = Vector2(347, 324)
+scale = Vector2(3.075, 2.89286)
+texture = ExtResource("1_jyn5l")
+
+[node name="Back3" type="Sprite2D" parent="Fondo"]
+position = Vector2(587, 324)
+scale = Vector2(2.975, 2.89286)
+texture = ExtResource("1_jyn5l")
+
+[node name="Back5" type="Sprite2D" parent="Fondo"]
+position = Vector2(1044, 324)
+scale = Vector2(2.7, 2.89286)
+texture = ExtResource("1_jyn5l")
+
+[node name="Back4" type="Sprite2D" parent="Fondo"]
+position = Vector2(821, 324)
+scale = Vector2(2.875, 2.89286)
+texture = ExtResource("1_jyn5l")
+
+[node name="Medio" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Middle" type="Sprite2D" parent="Medio"]
+position = Vector2(133.5, 324)
+scale = Vector2(2.38393, 2.89286)
+texture = ExtResource("2_geqcf")
+
+[node name="Middle2" type="Sprite2D" parent="Medio"]
+position = Vector2(420.75, 324)
+scale = Vector2(2.77232, 2.89286)
+texture = ExtResource("2_geqcf")
+
+[node name="Middle3" type="Sprite2D" parent="Medio"]
+position = Vector2(1018, 324)
+scale = Vector2(2.38393, 2.89286)
+texture = ExtResource("2_geqcf")
+
+[node name="Middle4" type="Sprite2D" parent="Medio"]
+position = Vector2(729.75, 324)
+scale = Vector2(2.76339, 2.89286)
+texture = ExtResource("2_geqcf")
+
+[node name="Frente" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Front" type="Sprite2D" parent="Frente"]
+position = Vector2(295.5, 324.5)
+scale = Vector2(2.4625, 2.88839)
+texture = ExtResource("3_yen4d")
+
+[node name="Front2" type="Sprite2D" parent="Frente"]
+position = Vector2(871.5, 324.75)
+scale = Vector2(2.3375, 2.88616)
+texture = ExtResource("3_yen4d")

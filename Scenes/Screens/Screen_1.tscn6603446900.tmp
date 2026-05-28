@@ -1,0 +1,92 @@
+[gd_scene load_steps=12 format=3 uid="uid://vmxaaf7krigl"]
+
+[ext_resource type="PackedScene" uid="uid://qwet0nba2v2m" path="res://Scenes/Characters/Ninja_Frog.tscn" id="1_jvwkk"]
+[ext_resource type="PackedScene" uid="uid://swqeh7snfcgx" path="res://Scenes/escenario1.tscn" id="2_o68uk"]
+[ext_resource type="PackedScene" uid="uid://dlhy1oo88xiuh" path="res://Scenes/Backgrounds/background _mountain.tscn" id="3_o68uk"]
+[ext_resource type="PackedScene" uid="uid://b2hx4cqlljpe6" path="res://Scenes/Objects/moving_platform_1.tscn" id="4_avt20"]
+[ext_resource type="PackedScene" uid="uid://bhd3ui7fwrdni" path="res://Scenes/Objects/moving_saw.tscn" id="5_21u7t"]
+[ext_resource type="PackedScene" uid="uid://bmrxpwpj1ey8e" path="res://Scenes/Objects/trampoline.tscn" id="6_uq13g"]
+[ext_resource type="PackedScene" uid="uid://8pdb2sbsgmxw" path="res://Scenes/Objects/spike_ball.tscn" id="7_tk4ix"]
+
+[sub_resource type="Curve2D" id="Curve2D_avt20"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 421, 121, 0, 0, 0, 0, 986, 120)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_uq13g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_21u7t"]
+resource_name = "regular_move"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tk4ix"]
+_data = {
+&"RESET": SubResource("Animation_uq13g"),
+&"regular_move": SubResource("Animation_21u7t")
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-18, 19)
+
+[node name="ninja_frog" parent="." instance=ExtResource("1_jvwkk")]
+position = Vector2(38, 334)
+
+[node name="TileMap" parent="." instance=ExtResource("2_o68uk")]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_o68uk")]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_avt20")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(421, 121)
+rotation = -0.00176991
+loop = false
+
+[node name="moving_platform_1" parent="Path2D/PathFollow2D" instance=ExtResource("4_avt20")]
+rotation = -0.0115269
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_tk4ix")
+}
+autoplay = "regular_move"
+
+[node name="saw" parent="." instance=ExtResource("5_21u7t")]
+position = Vector2(663, 504)
+
+[node name="Node2D" parent="." instance=ExtResource("6_uq13g")]
+position = Vector2(1396, 509)
+
+[node name="SpikeBall" parent="." instance=ExtResource("7_tk4ix")]
+position = Vector2(1506, 188)
+
+[node name="SpikeBall2" parent="." instance=ExtResource("7_tk4ix")]
+position = Vector2(608, 251)

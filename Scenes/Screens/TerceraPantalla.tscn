@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfgfywyr7n2c0"]
+
+[ext_resource type="PackedScene" uid="uid://bxodek7hu41f" path="res://Scenes/Backgrounds/background_rp.tscn" id="1_fg6vk"]
+[ext_resource type="PackedScene" uid="uid://bdg03cn1mwmff" path="res://Scenes/Screens/TerceraPantallaTileSet.tscn" id="2_5saww"]
+[ext_resource type="PackedScene" uid="uid://bkurwvay31o61" path="res://Scenes/Characters/Caballero.tscn" id="3_gwtni"]
+[ext_resource type="PackedScene" uid="uid://dp4w4luho4fqv" path="res://Scenes/Screens/DeadMenu.tscn" id="4_441tm"]
+[ext_resource type="PackedScene" uid="uid://bfjlyknk7wx0r" path="res://Scenes/Characters/goblin.tscn" id="5_pu10p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_441tm"]
+size = Vector2(30.5, 614)
+
+[node name="TerceraPantalla" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_fg6vk")]
+
+[node name="Node" parent="." instance=ExtResource("2_5saww")]
+
+[node name="knight" parent="." instance=ExtResource("3_gwtni")]
+z_index = 1
+position = Vector2(90, 487)
+
+[node name="NextMap3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextMap3"]
+position = Vector2(9150.75, 305)
+shape = SubResource("RectangleShape2D_441tm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("4_441tm")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_pu10p")]
+z_index = 1
+position = Vector2(623, 552)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("5_pu10p")]
+z_index = 1
+position = Vector2(2122, 451)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("5_pu10p")]
+z_index = 1
+position = Vector2(2831, 446)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("5_pu10p")]
+z_index = 1
+position = Vector2(3780, 546)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("5_pu10p")]
+z_index = 1
+position = Vector2(6094, 66)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("5_pu10p")]
+z_index = 1
+position = Vector2(7608, 538)
+
+[connection signal="area_entered" from="NextMap3" to="knight" method="_on_next_map_3_area_entered"]

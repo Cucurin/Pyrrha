@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://3a3tutr0563a"]
+
+[ext_resource type="Texture2D" uid="uid://b47kwhjnyv774" path="res://Assets/Background/Country Bg/country-platform-back.png" id="1_jjoqm"]
+[ext_resource type="Texture2D" uid="uid://bscl08umqba08" path="res://Assets/Background/Country Bg/country-platform-forest.png" id="2_bttvj"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="Fondo" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Country-platform-back" type="Sprite2D" parent="Fondo"]
+position = Vector2(576, 324)
+scale = Vector2(3, 2.89286)
+texture = ExtResource("1_jjoqm")
+
+[node name="Frente" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Country-platform-forest" type="Sprite2D" parent="Frente"]
+position = Vector2(194.5, 378.5)
+scale = Vector2(2.43125, 2.40625)
+texture = ExtResource("2_bttvj")
+
+[node name="Country-platform-forest3" type="Sprite2D" parent="Frente"]
+position = Vector2(965.75, 379)
+scale = Vector2(2.35312, 2.40625)
+texture = ExtResource("2_bttvj")
+
+[node name="Country-platform-forest2" type="Sprite2D" parent="Frente"]
+position = Vector2(583.25, 378.25)
+scale = Vector2(2.42813, 2.40848)
+texture = ExtResource("2_bttvj")

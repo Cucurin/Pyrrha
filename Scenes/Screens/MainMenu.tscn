@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://dcw0m4rnae0n8"]
+
+[ext_resource type="Script" uid="uid://w75n06va1at6" path="res://control.gd" id="1_60bxw"]
+[ext_resource type="Texture2D" uid="uid://ca6ujpbbkcmp4" path="res://Assets/Background/MainMenu_Background.png" id="2_7u1fx"]
+[ext_resource type="Texture2D" uid="uid://0vyg4ogx4l0o" path="res://Assets/Items/Buttons/Start/Start1.png" id="3_441x2"]
+[ext_resource type="Texture2D" uid="uid://b0k7ovsex6mkv" path="res://Assets/Items/Buttons/Settings/Settings1.png" id="3_kpgju"]
+[ext_resource type="Texture2D" uid="uid://bm32drd4ku0qd" path="res://Assets/Items/Buttons/Settings/Settings5.png" id="4_3oy6j"]
+[ext_resource type="Texture2D" uid="uid://dsyeti5namvtv" path="res://Assets/Items/Buttons/Start/Start4.png" id="4_qme8y"]
+[ext_resource type="Texture2D" uid="uid://bxunj6ia46c18" path="res://Assets/Items/Buttons/Start/Start2.png" id="5_0xkci"]
+[ext_resource type="Texture2D" uid="uid://dlt0pp11pawet" path="res://Assets/Items/Buttons/Settings/Settings2.png" id="5_kpgju"]
+[ext_resource type="Texture2D" uid="uid://dxptwmn5kwkya" path="res://Assets/Items/Buttons/Quit/Quit1.png" id="6_lvwqe"]
+[ext_resource type="Texture2D" uid="uid://c4tdap0baj7ac" path="res://Assets/Items/Buttons/Quit/Quit4.png" id="7_lvwqe"]
+[ext_resource type="Texture2D" uid="uid://dnn8y8etiar6w" path="res://Assets/Items/Buttons/Quit/Quit2.png" id="8_4dij5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_60bxw")
+
+[node name="MainMenuBackground" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576, 325)
+scale = Vector2(0.75651, 0.676758)
+texture = ExtResource("2_7u1fx")
+flip_h = true
+
+[node name="Start" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 855.0
+offset_top = 466.0
+offset_right = 1039.0
+offset_bottom = 514.0
+texture_normal = ExtResource("3_441x2")
+texture_pressed = ExtResource("4_qme8y")
+texture_hover = ExtResource("5_0xkci")
+stretch_mode = 5
+
+[node name="Controls" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 855.0
+offset_top = 512.0
+offset_right = 1039.0
+offset_bottom = 560.0
+texture_normal = ExtResource("3_kpgju")
+texture_pressed = ExtResource("4_3oy6j")
+texture_hover = ExtResource("5_kpgju")
+stretch_mode = 5
+
+[node name="Quit" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 855.0
+offset_top = 558.0
+offset_right = 1039.0
+offset_bottom = 607.0
+texture_normal = ExtResource("6_lvwqe")
+texture_pressed = ExtResource("7_lvwqe")
+texture_hover = ExtResource("8_4dij5")
+stretch_mode = 5
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://wyx1wqo5jpcy"
+path="res://.godot/imported/Fire_Witch.dialogue-6f1ef0d67e27252926d9396540402b53.tres"
+
+[deps]
+
+source_file="res://Scenes/Dialogs/Fire_Witch.dialogue"
+dest_files=["res://.godot/imported/Fire_Witch.dialogue-6f1ef0d67e27252926d9396540402b53.tres"]
+
+[params]
+
+defaults=true

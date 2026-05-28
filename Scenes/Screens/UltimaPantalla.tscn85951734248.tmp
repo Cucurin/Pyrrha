@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=3 uid="uid://d6ewnsngxton"]
+
+[ext_resource type="PackedScene" uid="uid://dlhy1oo88xiuh" path="res://Scenes/Backgrounds/background _mountain.tscn" id="1_p7lfq"]
+[ext_resource type="PackedScene" uid="uid://c7ijwj5xrig0l" path="res://Scenes/Screens/UltimaPantallaTileset.tscn" id="2_s3rdq"]
+[ext_resource type="PackedScene" uid="uid://bkurwvay31o61" path="res://Scenes/Characters/Caballero.tscn" id="3_1s5b7"]
+[ext_resource type="PackedScene" uid="uid://c8ybpj0m115ve" path="res://Scenes/Screens/DeadMenu.tscn" id="4_avew0"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/goblin.tscn" id="5_f0f0r"]
+[ext_resource type="PackedScene" uid="uid://bmrxpwpj1ey8e" path="res://Scenes/Objects/trampoline.tscn" id="6_vhhch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0f0r"]
+size = Vector2(30.5, 614)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_p7lfq")]
+
+[node name="Node" parent="." instance=ExtResource("2_s3rdq")]
+
+[node name="knight" parent="." instance=ExtResource("3_1s5b7")]
+z_index = 1
+position = Vector2(84, 456)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_avew0")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_f0f0r")]
+z_index = 1
+position = Vector2(1296, 436)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("5_f0f0r")]
+z_index = 1
+position = Vector2(1931, 128)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("5_f0f0r")]
+z_index = 1
+position = Vector2(2988, 512)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("5_f0f0r")]
+z_index = 1
+position = Vector2(3532, 445)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("5_f0f0r")]
+z_index = 1
+position = Vector2(4082, 336)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("5_f0f0r")]
+z_index = 1
+position = Vector2(4627, 236)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("5_f0f0r")]
+z_index = 1
+position = Vector2(5718, 335)
+
+[node name="CharacterBody2D8" parent="." instance=ExtResource("5_f0f0r")]
+z_index = 1
+position = Vector2(6773, 503)
+
+[node name="NextMap4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextMap4"]
+position = Vector2(9150.75, 305)
+shape = SubResource("RectangleShape2D_f0f0r")
+
+[node name="Node2D" parent="." instance=ExtResource("6_vhhch")]
+z_index = 1
+position = Vector2(7274, 567)
+
+[connection signal="area_entered" from="NextMap4" to="knight" method="_on_next_map_4_area_entered"]

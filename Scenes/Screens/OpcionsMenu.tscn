@@ -1,0 +1,124 @@
+[gd_scene load_steps=14 format=3 uid="uid://k7q2r2m8hbc7"]
+
+[ext_resource type="Texture2D" uid="uid://b6jah1tuwwhre" path="res://Assets/Background/Opcions_background.png" id="1_21yiy"]
+[ext_resource type="Script" uid="uid://cekwswvax0skn" path="res://Scenes/Screens/opcions_menu.gd" id="1_vnphg"]
+[ext_resource type="Texture2D" uid="uid://cvx5cq3gax2yy" path="res://Assets/Items/KeyBoard/full keyboard dark.png" id="3_j5qp5"]
+[ext_resource type="Texture2D" uid="uid://cxe7xyil05yu0" path="res://Assets/Items/Buttons/Back/Back1.png" id="4_ly6on"]
+[ext_resource type="Texture2D" uid="uid://dqnhmbqdbmyfj" path="res://Assets/Items/Buttons/Back/Back5.png" id="5_cy5bb"]
+[ext_resource type="Texture2D" uid="uid://3oi12faifxoq" path="res://Assets/Items/Buttons/Back/Back2.png" id="6_3paaf"]
+[ext_resource type="Texture2D" uid="uid://1kcop18c6m81" path="res://Assets/Items/KeyBoard/Down Arrow.png" id="7_gfdoc"]
+[ext_resource type="Texture2D" uid="uid://dgg6xloqk57nw" path="res://Assets/Items/KeyBoard/Left Arrow.png" id="8_v4vig"]
+[ext_resource type="Texture2D" uid="uid://4k06bq33fssu" path="res://Assets/Items/KeyBoard/Right Arrow.png" id="9_g7eau"]
+[ext_resource type="Texture2D" uid="uid://q2ljpwt8tb82" path="res://Assets/Items/KeyBoard/Up Arrow.png" id="10_r0gjb"]
+[ext_resource type="Texture2D" uid="uid://d21ugq57br1xv" path="res://Assets/Items/KeyBoard/Z.png" id="11_uan2s"]
+[ext_resource type="Texture2D" uid="uid://d2bn27mfcnkml" path="res://Assets/Items/KeyBoard/X.png" id="12_4ayjv"]
+[ext_resource type="Texture2D" uid="uid://fplripm13ric" path="res://Assets/Items/KeyBoard/space.png" id="13_1vwxc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vnphg")
+
+[node name="OpcionsBackground" type="Sprite2D" parent="."]
+position = Vector2(577, 326)
+scale = Vector2(1.19531, 0.638672)
+texture = ExtResource("1_21yiy")
+
+[node name="controllerButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 68.0
+offset_right = 714.0
+offset_bottom = 109.0
+text = "Controller"
+
+[node name="keyboardButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 68.0
+offset_right = 558.0
+offset_bottom = 109.0
+text = "Keyboard"
+
+[node name="FullKeyboardDark" type="Sprite2D" parent="."]
+position = Vector2(432, 295)
+scale = Vector2(1.24121, 1.43)
+texture = ExtResource("3_j5qp5")
+
+[node name="backButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 560.0
+offset_right = 266.0
+offset_bottom = 668.0
+texture_normal = ExtResource("4_ly6on")
+texture_pressed = ExtResource("5_cy5bb")
+texture_hover = ExtResource("6_3paaf")
+stretch_mode = 4
+
+[node name="DownArrow" type="Sprite2D" parent="."]
+position = Vector2(850, 236)
+texture = ExtResource("7_gfdoc")
+
+[node name="LeftArrow" type="Sprite2D" parent="."]
+position = Vector2(807, 235)
+texture = ExtResource("8_v4vig")
+
+[node name="RightArrow" type="Sprite2D" parent="."]
+position = Vector2(894, 235)
+texture = ExtResource("9_g7eau")
+
+[node name="UpArrow" type="Sprite2D" parent="."]
+position = Vector2(851, 189)
+texture = ExtResource("10_r0gjb")
+
+[node name="Z" type="Sprite2D" parent="."]
+position = Vector2(850, 311)
+texture = ExtResource("11_uan2s")
+
+[node name="X" type="Sprite2D" parent="."]
+position = Vector2(850, 378)
+texture = ExtResource("12_4ayjv")
+
+[node name="Space" type="Sprite2D" parent="."]
+position = Vector2(854, 457)
+texture = ExtResource("13_1vwxc")
+
+[node name="Moverse" type="Label" parent="."]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 215.0
+offset_right = 1021.0
+offset_bottom = 231.0
+text = "Moverse"
+
+[node name="Dash" type="Label" parent="."]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 302.0
+offset_right = 1021.0
+offset_bottom = 318.0
+text = "Atacar"
+
+[node name="Pegar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 369.0
+offset_right = 1021.0
+offset_bottom = 385.0
+text = "Dash"
+
+[node name="Saltar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 955.0
+offset_top = 449.0
+offset_right = 1021.0
+offset_bottom = 465.0
+text = "Moverse"
+
+[connection signal="pressed" from="controllerButton" to="." method="_on_controller_button_pressed"]
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]

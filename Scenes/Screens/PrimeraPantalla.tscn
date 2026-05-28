@@ -1,0 +1,59 @@
+[gd_scene load_steps=12 format=3 uid="uid://b0nlbh75qdxil"]
+
+[ext_resource type="PackedScene" uid="uid://b66fg3ahq3ul6" path="res://Scenes/Screens/Inicio.tscn" id="1_nko0q"]
+[ext_resource type="PackedScene" uid="uid://3a3tutr0563a" path="res://Scenes/Backgrounds/background_country.tscn" id="3_k0sr2"]
+[ext_resource type="PackedScene" uid="uid://bkurwvay31o61" path="res://Scenes/Characters/Caballero.tscn" id="3_nko0q"]
+[ext_resource type="PackedScene" uid="uid://bmrxpwpj1ey8e" path="res://Scenes/Objects/trampoline.tscn" id="4_1ma6v"]
+[ext_resource type="PackedScene" uid="uid://8pdb2sbsgmxw" path="res://Scenes/Objects/spike_ball.tscn" id="5_k0sr2"]
+[ext_resource type="AudioStream" uid="uid://cupc8ysfy8uhp" path="res://Assets/Sounds/First_Level_Music.wav" id="6_rve6x"]
+[ext_resource type="Script" uid="uid://ulw4lb0xd8tv" path="res://Scenes/Screens/background_audio.gd" id="7_tsvly"]
+[ext_resource type="PackedScene" uid="uid://b70k7a1bbp30v" path="res://Scenes/Characters/fire_witch.tscn" id="8_2w8yy"]
+[ext_resource type="PackedScene" uid="uid://bhd3ui7fwrdni" path="res://Scenes/Objects/moving_saw.tscn" id="9_vf7n4"]
+[ext_resource type="PackedScene" uid="uid://dp4w4luho4fqv" path="res://Scenes/Screens/DeadMenu.tscn" id="10_qc851"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vf7n4"]
+size = Vector2(30.5, 614)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node" parent="." instance=ExtResource("1_nko0q")]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_k0sr2")]
+
+[node name="knight" parent="." instance=ExtResource("3_nko0q")]
+z_index = 1
+position = Vector2(161, 521)
+
+[node name="Node2D" parent="." instance=ExtResource("4_1ma6v")]
+position = Vector2(2467, 578)
+
+[node name="SpikeBall" parent="." instance=ExtResource("5_k0sr2")]
+position = Vector2(3474, 412)
+
+[node name="background_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rve6x")
+volume_db = -10.621
+autoplay = true
+script = ExtResource("7_tsvly")
+
+[node name="FireWitch" parent="." instance=ExtResource("8_2w8yy")]
+position = Vector2(773, 550)
+
+[node name="saw" parent="." instance=ExtResource("9_vf7n4")]
+position = Vector2(4843, 347)
+
+[node name="saw2" parent="." instance=ExtResource("9_vf7n4")]
+position = Vector2(5421, 345)
+
+[node name="NextMap" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextMap"]
+position = Vector2(9150.75, 305)
+shape = SubResource("RectangleShape2D_vf7n4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("10_qc851")]
+
+[connection signal="finished" from="background_audio" to="background_audio" method="_on_finished"]
+[connection signal="area_entered" from="NextMap" to="knight" method="_on_next_map_area_entered"]

@@ -1,0 +1,12 @@
+~ start
+
+Eleonor: Has despertado al fin, caballero.[next=auto]
+Caballero: ¿Quién... quién eres?[next=auto]
+Eleonor: Mi nombre es Eleonor, bruja de las llamas eternas. Tu tiempo aún no ha llegado; he decidido devolverte la vida para que cumplas tu misión.[next=auto]
+Caballero: ¿Me has revivido? ¿Por qué harías algo así?[next=auto]
+Eleonor: Tus actos pueden cambiar el destino del mundo. Pero necesitarás ayuda para avanzar por estos lugares olvidados.[next=auto]
+Caballero: ¿Ayuda?[next=auto]
+Eleonor: Sí. El fuego que te ha devuelto a la vida también te otorga poderes. Primero, salta pulsando [Espacio], y para llegar más alto, vuelve a pulsar [Espacio] en el aire. Segundo, cuando enfrentes grandes abismos, pulsa la tecla [Shift] mientras te mueves hacia adelante para realizar un rápido dash impulsado por las llamas.[next=auto]
+Caballero: Saltar y avanzar velozmente...[next=auto]
+Eleonor: Precisamente. Usa estos dones con sabiduría, caballero. Tu camino apenas comienza.[next=auto]
+=> END

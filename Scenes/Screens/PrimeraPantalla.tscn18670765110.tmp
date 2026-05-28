@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0nlbh75qdxil"]
+
+[ext_resource type="PackedScene" uid="uid://b66fg3ahq3ul6" path="res://Scenes/Screens/Inicio.tscn" id="1_nko0q"]
+[ext_resource type="PackedScene" uid="uid://3a3tutr0563a" path="res://Scenes/Backgrounds/background_country.tscn" id="3_k0sr2"]
+[ext_resource type="PackedScene" uid="uid://bkurwvay31o61" path="res://Scenes/Characters/Caballero.tscn" id="3_nko0q"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node" parent="." instance=ExtResource("1_nko0q")]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_k0sr2")]
+
+[node name="knight" parent="." instance=ExtResource("3_nko0q")]
+z_index = 1
+position = Vector2(163, 517)

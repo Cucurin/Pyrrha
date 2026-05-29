@@ -19,13 +19,14 @@ Este proyecto fue desarrollado como trabajo final de ciclo utilizando Godot Engi
 <br> -Ambientación y efectos visuales
 <br> -Arquitectura modular en GDScript
 <br> -Sistema de niveles y escenas
+
 ## Tecnologías utilizadas
-<br> -Godot Engine
+ -Godot Engine
 <br> -GDScript
 <br> -Pixel Art
 <br> -Git & GitHub
 ## Estructura del proyecto
-<br>Pyrrha/
+Pyrrha
 <br>│
 <br>├── assets/        # Sprites, audio y recursos visuales
 <br>├── scenes/        # Escenas principales del juego

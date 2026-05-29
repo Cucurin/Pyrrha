@@ -8,25 +8,25 @@ Pyrrha es un videojuego 2D inspirado en los clásicos metroidvania, centrado en 
 
 Este proyecto fue desarrollado como trabajo final de ciclo utilizando Godot Engine y GDScript, con el objetivo de aplicar conceptos de:
 
-Arquitectura de videojuegos
-Diseño de niveles
-Sistemas de combate
-Gestión de escenas y entidades
-Animaciones 2D
-Desarrollo modular y escalable
- -Características
- -Exploración estilo metroidvania
- -Arte Pixel Art en 2D
- -Sistema de combate
- -Enemigos y entidades dinámicas
- -Ambientación y efectos visuales
- -Arquitectura modular en GDScript
- -Sistema de niveles y escenas
- -Tecnologías utilizadas
-Godot Engine
-GDScript
-Pixel Art
-Git & GitHub
+<br> -Arquitectura de videojuegos
+<br> -Diseño de niveles
+<br> -Sistemas de combate
+<br> -Gestión de escenas y entidades
+<br> -Animaciones 2D
+<br> -Desarrollo modular y escalable
+<br> -Características
+<br> -Exploración estilo metroidvania
+<br> -Arte Pixel Art en 2D
+<br> -Sistema de combate
+<br> -Enemigos y entidades dinámicas
+<br> -Ambientación y efectos visuales
+<br> -Arquitectura modular en GDScript
+<br> -Sistema de niveles y escenas
+## Tecnologías utilizadas
+<br> -Godot Engine
+<br> -GDScript
+<br> -Pixel Art
+<br> -Git & GitHub
 ## Estructura del proyecto
 <br>Pyrrha/
 <br>│

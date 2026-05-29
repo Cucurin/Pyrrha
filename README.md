@@ -28,14 +28,14 @@ GDScript
 Pixel Art
 Git & GitHub
 ## Estructura del proyecto
-Pyrrha/
-│
-├── assets/        # Sprites, audio y recursos visuales
-├── scenes/        # Escenas principales del juego
-├── scripts/       # Lógica y sistemas del juego
-├── ui/            # Interfaces y HUD
-├── enemies/       # IA y comportamiento de enemigos
-└── player/        # Controlador y mecánicas del jugador
+<br>Pyrrha/
+<br>│
+<br>├── assets/        # Sprites, audio y recursos visuales
+<br>├── scenes/        # Escenas principales del juego
+<br>├── scripts/       # Lógica y sistemas del juego
+<br>├── ui/            # Interfaces y HUD
+<br>├── enemies/       # IA y comportamiento de enemigos
+<br>└── player/        # Controlador y mecánicas del jugador
 ## Cómo ejecutar el proyecto
 Clona el repositorio:
 git clone https://github.com/Cucurin/Pyrrha.git
@@ -57,12 +57,12 @@ Diseño de gameplay
 
 ## Estado del proyecto
 
-🚧 Proyecto en desarrollo / académico.
+Finalizado.
 
-👤 Autor
+## Autor
 
 Desarrollado por Cucurin.
 
-📜 Licencia
+## Licencia
 
 Este proyecto se distribuye bajo la licencia especificada en el repositorio.

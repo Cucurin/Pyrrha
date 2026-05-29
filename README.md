@@ -38,9 +38,9 @@ Git & GitHub
 <br>└── player/        # Controlador y mecánicas del jugador
 ## Cómo ejecutar el proyecto
 Clona el repositorio:
-git clone https://github.com/Cucurin/Pyrrha.git
-Abre el proyecto con Godot.
-Ejecuta la escena principal desde el editor.
+<br>git clone https://github.com/Cucurin/Pyrrha.git
+<br>Abre el proyecto con Godot.
+<br>Ejecuta la escena principal desde el editor.
 
 El objetivo principal de Pyrrha fue desarrollar un videojuego funcional aplicando buenas prácticas de programación y diseño de videojuegos, además de profundizar en el uso de Godot Engine para proyectos 2D.
 
